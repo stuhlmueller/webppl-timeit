@@ -22,9 +22,9 @@ To globally install `webppl-timeit`, run:
 
 This may print warnings (`npm WARN ENOENT`...) which can be ignored.
 
-To update to the latest version, run:
+To upgrade to the latest version, run:
 
-    npm update --prefix ~/.webppl webppl-timeit
+    npm install --prefix ~/.webppl webppl-timeit --force
 
 ## Usage
 
