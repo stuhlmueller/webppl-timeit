@@ -1,19 +1,19 @@
-var lowresNow = function() {
+var getLowResNow = function() {
   return new Date().getTime();
 }
 
+var getNow = (((typeof window !== 'undefined') && window.performance) ?
+              function(){ return window.performance.now() } :
+              getLowResNow);
+
 var sleep = function(ms){
-  var now = new Date().getTime();
-  while (new Date().getTime() < now + ms) {
+  var now = getNow();
+  while (getNow() < now + ms) {
     /* do nothing */
   } 
 }
 
-var now = (((typeof window !== 'undefined') && window.performance) ?
-           window.performance.now :
-           lowresNow);
-
 module.exports = {
-  now: now,
+  now: getNow,
   sleep: sleep
 }
