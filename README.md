@@ -22,6 +22,10 @@ To globally install `webppl-timeit`, run:
 
 This may print warnings (`npm WARN ENOENT`...) which can be ignored.
 
+To update to the latest version, run:
+
+    npm update --prefix ~/.webppl webppl-timeit
+
 ## Usage
 
 Once installed, you can make `timeit` available to `program.wppl` by running:
